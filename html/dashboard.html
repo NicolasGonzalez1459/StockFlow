@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard | StockFlow</title>
+<link rel="stylesheet" href="../css/dashboard.css?v=20260828">
+</head>
+<body>
+<div class="layout">
+  <aside class="side">
+    <div class="brand"><div class="logo">SF</div>Stock<span>Flow</span></div>
+    <nav id="nav"></nav>
+  </aside>
+  <main class="main">
+    <div class="top">
+      <div><h1 data-i18n="dashboard">Dashboard</h1><div class="h-sub">HuskyTech Solutions · BT Informatica 2026</div></div>
+      <div class="top-right">
+        <span class="chip" id="who"></span>
+        <select id="lang" style="width:auto"><option value="es">ES</option><option value="en">EN</option></select>
+        <button class="btn sec" id="salir" data-i18n="logout">Salir</button>
+      </div>
+    </div>
+
+    <div class="panel row">
+      <div><label data-i18n="from">Desde</label><input type="date" id="desde"></div>
+      <div><label data-i18n="to">Hasta</label><input type="date" id="hasta"></div>
+      <div style="flex:0"><button class="btn" id="aplicar" data-i18n="apply">Aplicar</button></div>
+    </div>
+    <div class="cards">
+      <div class="card"><div class="k" data-i18n="salesTotal"></div><div class="v" id="kVentas">-</div></div>
+      <div class="card"><div class="k" data-i18n="salesCount"></div><div class="v" id="kCant">-</div></div>
+      <div class="card"><div class="k" data-i18n="expensesTotal"></div><div class="v" id="kGastos">-</div></div>
+      <div class="card"><div class="k" data-i18n="margin"></div><div class="v" id="kMargen">-</div></div>
+      <div class="card"><div class="k" data-i18n="critical"></div><div class="v bad" id="kCritico">-</div></div>
+    </div>
+    <div class="grid3" id="boxKpiCharts">
+      <div class="panel"><h2 data-i18n="evolution"></h2>
+        <div class="chart-bars" id="chartSerie"></div>
+        <div class="chart-labels" id="chartSerieLbl"></div>
+      </div>
+      <div class="panel"><h2 data-i18n="composition"></h2>
+        <div class="donut-wrap" id="donutComposicion"></div>
+      </div>
+    </div>
+    <div class="panel" id="boxTop"><h2 data-i18n="topProducts"></h2>
+      <div class="donut-wrap" id="donutTop"></div>
+    </div>
+    <div class="panel" id="boxNotis"><h2 data-i18n="notifications"></h2><table><tbody id="notis"></tbody></table></div>
+
+    <div class="panel" id="boxmov">
+      <h2 data-i18n="movements"></h2>
+      <form id="fm" class="row">
+        <div><label data-i18n="product"></label><select id="mprod"></select></div>
+        <div><label data-i18n="type"></label><select id="mtipo"><option value="ingreso">+</option><option value="egreso">-</option><option value="ajuste">=</option></select></div>
+        <div><label data-i18n="qty"></label><input id="mcant" type="number" min="1" value="1" required></div>
+        <div><label data-i18n="reason"></label><input id="mmot"></div>
+        <div style="flex:0"><button class="btn" data-i18n="save"></button></div>
+      </form>
+    </div>
+    <div class="panel"><h2 data-i18n="movements"></h2>
+      <table><thead><tr><th data-i18n="date"></th><th data-i18n="product"></th><th data-i18n="type"></th><th data-i18n="qty"></th><th data-i18n="stock"></th><th data-i18n="user"></th></tr></thead><tbody id="movs"></tbody></table>
+    </div>
+
+    <p class="foot">POLO EDUCATIVO TECNOLOGICO — CETP-UTU | Proyecto de Egreso BT Informatica 2026</p>
+  </main>
+</div>
+<script src="../js/i18n.js?v=20260828"></script><script src="../js/app.js?v=20260828"></script><script src="../js/dashboard.js?v=20260828"></script>
+</body>
+</html>
