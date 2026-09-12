@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gastos | StockFlow</title>
+<link rel="stylesheet" href="../css/gastos.css?v=20260828">
+</head>
+<body>
+<div class="layout">
+  <aside class="side">
+    <div class="brand"><div class="logo">SF</div>Stock<span>Flow</span></div>
+    <nav id="nav"></nav>
+  </aside>
+  <main class="main">
+    <div class="top">
+      <div><h1 data-i18n="expenses">Gastos</h1><div class="h-sub">HuskyTech Solutions · BT Informatica 2026</div></div>
+      <div class="top-right">
+        <span class="chip" id="who"></span>
+        <select id="lang" style="width:auto"><option value="es">ES</option><option value="en">EN</option></select>
+        <button class="btn sec" id="salir" data-i18n="logout">Salir</button>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2 data-i18n="expenses"></h2>
+      <form class="row" id="fg">
+        <div><label data-i18n="category"></label><select id="gcat"></select></div>
+        <div><label data-i18n="description"></label><input id="gdesc" required></div>
+        <div><label data-i18n="amount"></label><input id="gmonto" type="number" step="0.01" required></div>
+        <div><label data-i18n="date"></label><input id="gfec" type="date" required></div>
+        <div style="flex:0"><button class="btn" data-i18n="save"></button></div>
+      </form>
+    </div>
+    <div class="panel">
+      <table><thead><tr><th data-i18n="date"></th><th data-i18n="category"></th><th data-i18n="description"></th><th data-i18n="amount"></th><th data-i18n="actions"></th></tr></thead><tbody id="tabla"></tbody></table>
+      <p class="right" style="margin-top:10px"><b data-i18n="total"></b>: <span id="total">$0</span></p>
+    </div>
+
+    <p class="foot">POLO EDUCATIVO TECNOLOGICO — CETP-UTU | Proyecto de Egreso BT Informatica 2026</p>
+  </main>
+</div>
+<script src="../js/i18n.js?v=20260828"></script><script src="../js/app.js?v=20260828"></script><script src="../js/gastos.js?v=20260828"></script>
+</body>
+</html>
