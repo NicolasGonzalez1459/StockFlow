@@ -1,11 +1,28 @@
+
+/vendor/
+/.env
+.env*
+
+
+*.log
+*.cache
+*.tmp
+*.swp
+*.swo
 .DS_Store
 Thumbs.db
+
+
+config/*.local.php
+config/config.php
+
+
+img/productos/*
+!img/productos/.gitkeep
 
 
 .vscode/
 .idea/
 
 
-*.log
-
-php/config.php
+Desktop.ini
