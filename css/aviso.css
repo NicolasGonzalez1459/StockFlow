@@ -1,0 +1,41 @@
+#avisos {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 1000;
+  display: grid;
+  gap: 8px;
+  max-width: min(92vw, 380px);
+}
+
+.aviso {
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #bcdff4;
+  background: #ffffff;
+  color: #223047;
+  font-size: 14px;
+  box-shadow: 0 8px 24px rgba(20, 40, 60, .16);
+  border-left-width: 5px;
+}
+
+.aviso.ok {
+  border-left-color: #1f8a5f;
+}
+
+.aviso.error {
+  border-left-color: #c0392b;
+}
+
+tr.leida td {
+  opacity: .55;
+}
+
+select.estado {
+  width: auto;
+  min-width: 120px;
+}
+
+#cancelar[hidden] {
+  display: none;
+}
