@@ -13,8 +13,8 @@
 Thumbs.db
 
 
-config/*.local.php
-config/config.php
+php/*.local.php
+php/config.php
 
 
 img/productos/*
